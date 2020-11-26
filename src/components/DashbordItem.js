@@ -1,3 +1,4 @@
+import { Button, makeStyles } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
 import {
   AiOutlineShoppingCart,
@@ -40,6 +41,94 @@ const DashbordItem = () => {
       <h3>KEY METRICS</h3>
 
       <div className={classes.options}>
+        <div className={classes.item}>
+          <Button>
+            <AiOutlineShoppingCart fontSize={40} />
+          </Button>
+        </div>
+        <div className={classes.item}>
+          <Button>
+            <BsFillBrightnessHighFill fontSize={40} />
+          </Button>
+        </div>
+        <div className={classes.item}>
+          <Button>
+            <IoMdSchool fontSize={40} />
+          </Button>
+        </div>
+      </div>
+
+      <div className={classes.options}>
+        <div className={classes.item}>
+          <Button>
+            <FaHome fontSize={40} />
+          </Button>
+        </div>
+        <div className={classes.item}>
+          <Button>
+            <FiAperture fontSize={40} />
+          </Button>
+        </div>
+        <div className={classes.item}>
+          <Button>
+            <FaCarSide fontSize={40} />
+          </Button>
+        </div>
+      </div>
+
+      <div className={classes.options}>
+        <div className={classes.item}>
+          <Button>
+            <FaPrayingHands fontSize={40} />
+          </Button>
+        </div>
+        <div className={classes.item}>
+          <Button>
+            <ImAirplane fontSize={40} />
+          </Button>
+        </div>
+        <div className={classes.item}>
+          <Button>
+            <MdAccountBalance fontSize={40} />
+          </Button>
+        </div>
+      </div>
+
+      <div className={classes.options}>
+        <div className={classes.item}>
+          <Button>
+            <MdWork fontSize={40} />
+          </Button>
+        </div>
+        <div className={classes.item}>
+          <Button>
+            {" "}
+            <BiWalk fontSize={40} />
+          </Button>
+        </div>
+        <div className={classes.item}>
+          <Button>
+            <AiOutlineSafety fontSize={40} />
+          </Button>
+        </div>
+      </div>
+
+      <div className={classes.options}>
+        <div className={classes.item}>
+          <Button>
+            <FaTree fontSize={40} />
+          </Button>
+        </div>
+        <div className={classes.item}>
+          <Button>
+            <AiFillHeart fontSize={40} />
+          </Button>
+        </div>
+        <div className={classes.item}>
+          <Button>
+            <FaPaintBrush fontSize={40} />
+          </Button>
+        </div>
         <MetricIcons
           icon={<AiOutlineShoppingCart fontSize={40} />}
           styles={classes.item}
