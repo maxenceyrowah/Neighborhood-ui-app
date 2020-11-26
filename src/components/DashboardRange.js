@@ -5,6 +5,8 @@ import {
   FormGroup,
   Grid,
 } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
+import PriceRange from "./PriceRange";
 
 const useStyles = makeStyles(() => ({
   container: {
@@ -95,6 +97,14 @@ const DashboardRange = () => {
         <span>Already have an account? Log In</span>
       </div>
     </>
+    <PriceRange
+      containerStyle={classes.container}
+      rangeStyle={classes.range}
+      isExist={true}
+      description="Personalize, save, compare searches and more!"
+      createAccount="Create your free account"
+      login="Already have an account? Log In"
+    />
   );
 };
 

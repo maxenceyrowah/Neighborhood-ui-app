@@ -1,40 +1,10 @@
 import {
-  makeStyles,
   Switch,
   withStyles,
   FormGroup,
   Grid,
+  makeStyles,
 } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core";
-import PriceRange from "./PriceRange";
-
-const useStyles = makeStyles(() => ({
-  container: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-  },
-  switch: {
-    fontSize: "small",
-    marginLeft: 5,
-  },
-  range: {
-    width: "100%",
-    border: "1px solid black",
-    textAlign: "center",
-    padding: 10,
-    borderRadius: 5,
-    height: 50,
-  },
-  account: {
-    marginTop: 5,
-    width: "100%",
-    border: "1px solid black",
-    borderRadius: 15,
-    padding: 5,
-    fontSize: 13,
-  },
-}));
 
 const AntSwitch = withStyles((theme) => ({
   root: {
@@ -69,15 +39,31 @@ const AntSwitch = withStyles((theme) => ({
   },
   checked: {},
 }))(Switch);
+
+const useStyles = makeStyles(() => ({
+  switch: {
+    fontSize: "small",
+    marginLeft: 5,
+  },
+  account: {
+    marginTop: 5,
+    width: "100%",
+    border: "1px solid black",
+    borderRadius: 15,
+    padding: 5,
+    fontSize: 13,
+  },
 }));
 
-const ResponsiveRange = () => {
+const PriceRange = (props) => {
   const classes = useStyles();
 
   return (
     <>
-      <div className={classes.container}>
-        <h4>PRICE RANGE</h4>
+      <div className={props.containerStyle}>
+        <div className="title">
+          <h3>PRICE RANGE</h3>
+        </div>
         <div className={classes.switch}>
           <FormGroup>
             <Grid component="label" container alignItems="center" spacing={1}>
@@ -90,13 +76,16 @@ const ResponsiveRange = () => {
           </FormGroup>
         </div>
       </div>
-      <div className={classes.range}>range</div>
+      <div className={props.rangeStyle}>range</div>
+      {props.isExist && (
+        <div className={classes.account}>
+          <span>{props.description}</span>
+          <div>{props.createAccount}</div>
+          <span>{props.login}</span>
+        </div>
+      )}
     </>
-    <PriceRange
-      containerStyle={classes.container}
-      rangeStyle={classes.range}
-    />
   );
 };
 
-export default ResponsiveRange;
+export default PriceRange;

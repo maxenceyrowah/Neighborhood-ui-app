@@ -1,4 +1,5 @@
 import { Button, makeStyles } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 import {
   AiOutlineShoppingCart,
   BsFillBrightnessHighFill,
@@ -17,6 +18,7 @@ import {
   FaTree,
 } from "react-icons/all";
 import DashboardRange from "./DashboardRange";
+import MetricIcons from "./MetricIcons";
 
 const useStyles = makeStyles((theme) => ({
   options: {
@@ -127,6 +129,63 @@ const DashbordItem = () => {
             <FaPaintBrush fontSize={40} />
           </Button>
         </div>
+        <MetricIcons
+          icon={<AiOutlineShoppingCart fontSize={40} />}
+          styles={classes.item}
+        />
+        <MetricIcons
+          icon={<BsFillBrightnessHighFill fontSize={40} />}
+          styles={classes.item}
+        />
+        <MetricIcons
+          icon={<IoMdSchool fontSize={40} />}
+          styles={classes.item}
+        />
+      </div>
+
+      <div className={classes.options}>
+        <MetricIcons icon={<FaHome fontSize={40} />} styles={classes.item} />
+        <MetricIcons
+          icon={<FiAperture fontSize={40} />}
+          styles={classes.item}
+        />
+        <MetricIcons icon={<FaCarSide fontSize={40} />} styles={classes.item} />
+      </div>
+
+      <div className={classes.options}>
+        <MetricIcons
+          icon={<FaPrayingHands fontSize={40} />}
+          styles={classes.item}
+        />
+        <MetricIcons
+          icon={<ImAirplane fontSize={40} />}
+          styles={classes.item}
+        />
+        <MetricIcons
+          icon={<MdAccountBalance fontSize={40} />}
+          styles={classes.item}
+        />
+      </div>
+
+      <div className={classes.options}>
+        <MetricIcons icon={<MdWork fontSize={40} />} styles={classes.item} />
+        <MetricIcons icon={<BiWalk fontSize={40} />} styles={classes.item} />
+        <MetricIcons
+          icon={<AiOutlineSafety fontSize={40} />}
+          styles={classes.item}
+        />
+      </div>
+
+      <div className={classes.options}>
+        <MetricIcons icon={<FaTree fontSize={40} />} styles={classes.item} />
+        <MetricIcons
+          icon={<AiFillHeart fontSize={40} />}
+          styles={classes.item}
+        />
+        <MetricIcons
+          icon={<FaPaintBrush fontSize={40} />}
+          styles={classes.item}
+        />
       </div>
       <DashboardRange />
     </>
